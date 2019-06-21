@@ -1,0 +1,33 @@
+module_hero.heroList:
+  path: '/heroList'
+  defaults:
+    _controller: '\Drupal\module_hero\Controller\HeroController::heroList'
+    _title: 'Our super heroes list in Routing'
+  requirements:
+    _permission: 'access content'
+
+# routing form 
+hero.form:
+  path: '/hero'
+  defaults:
+    _title: 'Hero Form'
+    _form: '\Drupal\module_hero\Form\HeroForm'
+  requirements: 
+    _permission: 'access content'
+
+    # routing Element form 
+module_hero.elementform:
+  path: '/element'
+  defaults:
+    _title: 'Element Form'
+    _form: '\Drupal\module_hero\Form\ElementForm'
+  requirements: 
+    _permission: 'access content'
+
+# routing ajax form
+module_hero.ajaxform:
+  path: '/ajax'
+  defaults:
+    _form: '\Drupal\module_hero\Form\AjaxForm'
+  requirements:
+    _permission: 'access content' 
